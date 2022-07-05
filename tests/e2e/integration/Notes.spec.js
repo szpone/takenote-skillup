@@ -11,7 +11,6 @@ describe('Notes and searching', () => {
     cy.get("[data-testid='sidebar-action-create-new-note']").click()
     cy.get('pre').type('testnote')
     cy.get('*[class^="note-menu-bar-button trash"]').click()
-
     cy.get("[data-testid='note-list']").children().should('have.length', 1)
   })
   it('Create note with shortcut', () => {
